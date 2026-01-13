@@ -24,17 +24,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-black text-white font-mono">
   <!-- Navbar -->
-  <nav class="flex justify-center px-6 py-4 shadow-sm bg-white">
+  <nav class="flex justify-center px-6 py-4 border-b border-gray-800 bg-black">
     <div class="w-3/4 flex items-center justify-between mx-auto">
       <div class="flex items-center space-x-2">
         <!-- Logo Image and Brand as Link -->
         <a href="index.html" class="flex items-center space-x-2">
           <img src="assets/logo.png" alt="CarGPT Logo" class="w-10 h-10">
-          <span class="font-bold text-lg asap-navbar-logo">CarGPT</span>
+          <span class="font-bold text-lg mono-font">CarGPT</span>
         </a>
       </div>
       <!-- <div class="flex items-center space-x-4">
@@ -51,90 +52,81 @@
 
   <!-- Main Content (Terms & Conditions) -->
   <section class="max-w-3xl mx-auto px-4 py-16">
-    <div class="bg-white rounded-xl shadow p-8">
-      <h1 class="text-3xl font-extrabold mb-2 text-center asap-navbar-logo">Terms & Conditions</h1>
-      <p class="text-sm text-gray-500 text-center mb-6">Effective Date: November 26, 2025</p>
-      <p class="mb-2"><strong>App Name:</strong> CarGPT</p>
-      <p class="mb-4"><strong>Developer:</strong> Ahmet Ömer</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">1. Introduction</h2>
-      <p class="mb-4">Welcome to CarGPT! These Terms & Conditions ("Terms") govern your use of the CarGPT mobile application (the "App"), developed by Ahmet Ömer. By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, please do not use the App.</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">2. Description of the App</h2>
-      <p class="mb-2">CarGPT is an AI-powered car identification app that uses advanced machine learning to recognize and identify cars from any photo. The App is:</p>
-      <ul class="list-disc pl-6 mb-2">
+    <div class="bg-gray-900 border border-gray-800 rounded-lg p-8">
+      <h1 class="text-3xl font-bold mb-2 text-center mono-font">Terms & Conditions</h1>
+      <p class="text-sm text-gray-500 text-center mb-6 mono-font">Effective Date: November 26, 2025</p>
+      <p class="mb-2 text-gray-400 mono-font"><strong class="text-white">App Name:</strong> CarGPT</p>
+      <p class="mb-4 text-gray-400 mono-font"><strong class="text-white">Developer:</strong> Ahmet Ömer</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">1. Introduction</h2>
+      <p class="mb-4 text-gray-400 mono-font">Welcome to CarGPT! These Terms & Conditions ("Terms") govern your use of the CarGPT mobile application (the "App"), developed by Ahmet Ömer. By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, please do not use the App.</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">2. Description of the App</h2>
+      <p class="mb-2 text-gray-400 mono-font">CarGPT is an AI-powered car identification app that uses advanced machine learning to recognize and identify cars from any photo. The App is:</p>
+      <ul class="list-disc pl-6 mb-2 text-gray-400 mono-font">
         <li>Free to download</li>
         <li>Requires internet connection for AI processing</li>
         <li>Available without registration or login</li>
         <li>Designed for car enthusiasts, buyers, and collectors</li>
       </ul>
-      <p class="mb-4">Full access is available through a credit-based system or an unlimited monthly subscription option.</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">3. Pricing and Payment Options</h2>
-      <p class="mb-2">CarGPT offers flexible payment options for car identification services:</p>
-      <ul class="list-disc pl-6 mb-2">
-        <li><strong>50 Credits</strong>: $1.99</li>
-        <li><strong>Unlimited Monthly Subscription</strong>: Monthly billing (billed automatically each month until cancelled)</li>
+      <p class="mb-4 text-gray-400 mono-font">Full access is available through a credit-based system or an unlimited monthly subscription option.</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">3. Pricing and Payment Options</h2>
+      <p class="mb-2 text-gray-400 mono-font">CarGPT offers flexible payment options for car identification services:</p>
+      <ul class="list-disc pl-6 mb-2 text-gray-400 mono-font">
+        <li><strong class="text-white">50 Credits</strong>: $1.99</li>
+        <li><strong class="text-white">Unlimited Monthly Subscription</strong>: Monthly billing (billed automatically each month until cancelled)</li>
       </ul>
-      <p class="mb-2"><strong>Details:</strong></p>
-      <ul class="list-disc pl-6 mb-4">
-        <li><strong>Payment</strong> is charged to your Apple ID account upon confirmation of purchase.</li>
-        <li><strong>Credit System:</strong> Each car identification request consumes one credit. Perfect for occasional use.</li>
-        <li><strong>Subscription:</strong> The Unlimited Monthly Subscription provides unlimited car identifications for the duration of the subscription period. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</li>
-        <li>You can <strong>restore purchases</strong> from within the App if reinstalling or switching devices.</li>
+      <p class="mb-2 text-gray-400 mono-font"><strong class="text-white">Details:</strong></p>
+      <ul class="list-disc pl-6 mb-4 text-gray-400 mono-font">
+        <li><strong class="text-white">Payment</strong> is charged to your Apple ID account upon confirmation of purchase.</li>
+        <li><strong class="text-white">Credit System:</strong> Each car identification request consumes one credit. Perfect for occasional use.</li>
+        <li><strong class="text-white">Subscription:</strong> The Unlimited Monthly Subscription provides unlimited car identifications for the duration of the subscription period. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.</li>
+        <li>You can <strong class="text-white">restore purchases</strong> from within the App if reinstalling or switching devices.</li>
         <li>You can manage your subscription and turn off auto-renewal in your Apple ID Account Settings after purchase.</li>
       </ul>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">4. Refunds</h2>
-      <p class="mb-4">All payments are handled by Apple. Refunds are issued solely at Apple's discretion, and users seeking a refund must follow Apple's refund request process through their App Store account.</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">5. User Data and Privacy</h2>
-      <p class="mb-2">CarGPT does not require registration and does not collect any personal information. Your photos are processed for car identification purposes only and are not saved on our servers.</p>
-      <p class="mb-2">To help improve the app experience and understand feature usage, CarGPT uses <strong>Firebase Analytics</strong>, a service provided by Google. This integration is limited to <strong>anonymous usage tracking only</strong>, such as:</p>
-      <ul class="list-disc pl-6 mb-2">
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">4. Refunds</h2>
+      <p class="mb-4 text-gray-400 mono-font">All payments are handled by Apple. Refunds are issued solely at Apple's discretion, and users seeking a refund must follow Apple's refund request process through their App Store account.</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">5. User Data and Privacy</h2>
+      <p class="mb-2 text-gray-400 mono-font">CarGPT does not require registration and does not collect any personal information. Your photos are processed for car identification purposes only and are not saved on our servers.</p>
+      <p class="mb-2 text-gray-400 mono-font">To help improve the app experience and understand feature usage, CarGPT uses <strong class="text-white">Firebase Analytics</strong>, a service provided by Google. This integration is limited to <strong class="text-white">anonymous usage tracking only</strong>, such as:</p>
+      <ul class="list-disc pl-6 mb-2 text-gray-400 mono-font">
         <li>When the app is opened</li>
         <li>Which features or screens are used</li>
         <li>General interaction duration</li>
       </ul>
-      <p class="mb-2"><strong>No personal data is collected or stored</strong>—this includes no access to your name, IP address, email, device identifiers, or any car photos. The analytics data is strictly aggregated and cannot be traced back to any individual user. Users may opt out of analytics tracking by adjusting their device settings.</p>
-      <p class="mb-4">For more information, please refer to our <a href="privacy.html" class="text-blue-600 hover:underline">Privacy Policy</a>.</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">6. Intellectual Property</h2>
-      <p class="mb-4">All AI models, design elements, and generated content within CarGPT are the property of the developer. However, users may freely use and share their car identification results for personal or non-commercial purposes.</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">7. Limitation of Liability</h2>
-      <p class="mb-4">CarGPT is provided "as is" and "as available." We make no guarantees regarding accuracy of car identification, fitness for purpose, or uninterrupted operation. The developer is not liable for any damages arising from the use or inability to use the App.</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">8. Changes to Terms</h2>
-      <p class="mb-4">We reserve the right to update or modify these Terms at any time. Any changes will be reflected within the App or the App Store listing. Continued use of the App after such changes constitutes acceptance of the revised Terms.</p>
-      <hr class="my-6">
-      <h2 class="text-xl font-bold mb-2 mt-8">9. Contact</h2>
-      <p class="mb-2"><strong>Ahmet Ömer</strong></p>
-      <p class="mb-2">📧 Email: <a href="mailto:me@ahmeto.com" class="text-blue-600 hover:underline">me@ahmeto.com</a></p>
+      <p class="mb-2 text-gray-400 mono-font"><strong class="text-white">No personal data is collected or stored</strong>—this includes no access to your name, IP address, email, device identifiers, or any car photos. The analytics data is strictly aggregated and cannot be traced back to any individual user. Users may opt out of analytics tracking by adjusting their device settings.</p>
+      <p class="mb-4 text-gray-400 mono-font">For more information, please refer to our <a href="privacy.html" class="text-white hover:text-gray-400 transition-colors">Privacy Policy</a>.</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">6. Intellectual Property</h2>
+      <p class="mb-4 text-gray-400 mono-font">All AI models, design elements, and generated content within CarGPT are the property of the developer. However, users may freely use and share their car identification results for personal or non-commercial purposes.</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">7. Limitation of Liability</h2>
+      <p class="mb-4 text-gray-400 mono-font">CarGPT is provided "as is" and "as available." We make no guarantees regarding accuracy of car identification, fitness for purpose, or uninterrupted operation. The developer is not liable for any damages arising from the use or inability to use the App.</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">8. Changes to Terms</h2>
+      <p class="mb-4 text-gray-400 mono-font">We reserve the right to update or modify these Terms at any time. Any changes will be reflected within the App or the App Store listing. Continued use of the App after such changes constitutes acceptance of the revised Terms.</p>
+      <hr class="my-6 border-gray-800">
+      <h2 class="text-xl font-bold mb-2 mt-8 text-white mono-font">9. Contact</h2>
+      <p class="mb-2 text-gray-400 mono-font"><strong class="text-white">Ahmet Ömer</strong></p>
+      <p class="mb-2 text-gray-400 mono-font">📧 Email: <a href="mailto:hi@ahmeto.com" class="text-white hover:text-gray-400 transition-colors">hi@ahmeto.com</a></p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white mt-12 py-6">
+  <footer class="bg-black mt-12 py-6 border-t border-gray-800">
     <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
-      <!-- <div class="flex items-center space-x-4 mb-1">
-        <!-- Social Links with Font Awesome -->
-        <!-- <a href="https://x.com/cargpt_app" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-blue-400" aria-label="Twitter" target="_blank" rel="noopener">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/cargpt/" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-pink-500" aria-label="Instagram" target="_blank" rel="noopener">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div> -->
-      <div class="flex items-center space-x-4 text-sm text-gray-500 mb-1">
-        <a href="terms.html" class="hover:underline">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:underline">Privacy Policy</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-        <a href="support.html" class="hover:underline">Support</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:underline" target="_blank" rel="noopener">Apple EULA</a>
+      <div class="flex items-center space-x-4 text-sm text-gray-400 mb-1 mono-font">
+        <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:text-white transition-colors" target="_blank" rel="noopener">Apple EULA</a>
       </div>
-      <div class="text-center text-xs text-gray-400 font-semibold tracking-wide mt-2">
-        Made with <span class="text-green-500">🚗</span> by © Ahmet Ömer 2025
+      <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2 mono-font">
+        Made with 🚗 by © Ahmet Ömer 2025
       </div>
     </div>
   </footer>

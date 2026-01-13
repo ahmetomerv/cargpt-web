@@ -26,17 +26,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-black text-white font-mono">
   <!-- Navbar -->
-  <nav class="flex justify-center px-6 py-4 shadow-sm bg-white">
+  <nav class="flex justify-center px-6 py-4 border-b border-gray-800 bg-black">
     <div class="w-3/4 flex items-center justify-between mx-auto">
       <div class="flex items-center space-x-2">
         <!-- Logo Image and Brand as Link -->
         <a href="index.html" class="flex items-center space-x-2">
           <img src="assets/logo.png" alt="CarGPT Logo" class="w-12 h-12">
-          <span class="font-bold text-lg asap-navbar-logo">CarGPT</span>
+          <span class="font-bold text-lg mono-font">CarGPT</span>
         </a>
       </div>
       <!-- <div class="flex items-center space-x-4">
@@ -52,17 +53,11 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-screen w-full bg-white relative py-16 text-center">
-    <!-- Dual Gradient Overlay (Top) Background -->
-    <div
-      class="absolute inset-0 z-0"
-      style="background-image: linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px), linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px), radial-gradient(circle 500px at 0% 20%, rgba(34, 112, 248, 0.3), transparent), radial-gradient(circle 500px at 100% 0%, rgba(59,130,246,0.3), transparent); background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%;"
-    ></div>
-    
+  <section class="min-h-screen w-full bg-black relative pt-16 pb-8 text-center">
     <!-- Content -->
     <div class="max-w-5xl mx-auto px-4 relative z-10">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 asap-navbar-logo">CarGPT – AI Car Identifier</h1>
-    <p class="text-lg md:text-xl text-gray-600 mb-8">CarGPT uses advanced AI to recognize and identify cars from any photo. Instantly get accurate details such as the car's make, model, year, body type, and color—just by uploading or snapping a picture.</p>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 mono-font">CarGPT – AI Car Identifier</h1>
+    <p class="text-lg md:text-xl text-gray-400 mb-8 mono-font">CarGPT uses advanced AI to recognize and identify cars from any photo. Instantly get accurate details such as the car's make, model, year, body type, and color—just by uploading or snapping a picture.</p>
     <div class="flex justify-center mb-8">
       <!-- App Store Badge -->
           <a href="https://apps.apple.com/us/app/cargpt-identify-cars-with-ai/id6749280783" class="inline-block pulse-blue-animation" target="_blank" rel="noopener">
@@ -70,7 +65,7 @@
         </a>
     </div>
     <!-- App Screenshots -->
-    <div class="w-full flex items-center justify-center mb-8">
+    <div class="w-full flex items-center justify-center mb-0">
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl">
         <img src="assets/phone/onboarding.png" alt="CarGPT Onboarding View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/onboarding.png', 'CarGPT Onboarding View')">
         <img src="assets/phone/home.png" alt="CarGPT Identification View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/home.png', 'CarGPT Identification View')">
@@ -82,91 +77,82 @@
   </section>
 
   <!-- Features Section -->
-  <section class="bg-gray-50 py-16">
+  <section class="bg-black pt-8 pb-16 border-t border-gray-800">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-4 asap-navbar-logo">Key Features</h2>
-      <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">Identify any car using image-based AI with instant results and no account required</p>
+      <h2 class="text-3xl font-bold text-center mb-4 mono-font">Key Features</h2>
+      <p class="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto mono-font">Identify any car using image-based AI with instant results and no account required</p>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- AI Car Identification -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-green-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-car text-green-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-car text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">AI Car Identification</h3>
-          <p class="text-gray-600">Identify any car using advanced AI technology. Get make, model, year, body type, and color instantly from photos.</p>
+          <h3 class="text-xl font-semibold mono-font">AI Car Identification</h3>
         </div>
 
         <!-- Photo & Camera Support -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-camera text-blue-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-camera text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Photo & Camera Support</h3>
-          <p class="text-gray-600">Take a photo using your camera or select one from your gallery. Works with both modern and classic vehicles.</p>
+          <h3 class="text-xl font-semibold mono-font">Photo & Camera Support</h3>
         </div>
 
         <!-- Instant Results -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-purple-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-bolt text-purple-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-bolt text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Instant Results</h3>
-          <p class="text-gray-600">Get accurate car details in seconds. Fast results with no account or sign-in required.</p>
+          <h3 class="text-xl font-semibold mono-font">Instant Results</h3>
         </div>
 
         <!-- Private and Secure -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-red-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-shield-halved text-red-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Private and Secure</h3>
-          <p class="text-gray-600">No personal data collected. Your images are not saved on our servers. Only anonymous usage data used to improve performance.</p>
+          <h3 class="text-xl font-semibold mono-font">Private and Secure</h3>
         </div>
 
         <!-- Classic & Modern Cars -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-yellow-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-car-side text-yellow-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-car-side text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Classic & Modern Cars</h3>
-          <p class="text-gray-600">Supports both modern and classic vehicles. Perfect for car enthusiasts, buyers, and collectors.</p>
+          <h3 class="text-xl font-semibold mono-font">Classic & Modern Cars</h3>
         </div>
 
         <!-- Simple Credit System -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-indigo-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-coins text-indigo-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-coins text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Simple Pricing</h3>
-          <p class="text-gray-600">Get an unlimited access with the monthly subscription or try it out with a 50 credits option.</p>
+          <h3 class="text-xl font-semibold mono-font">Simple Pricing</h3>
         </div>
 
         <!-- Detailed Car Information -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-pink-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-info-circle text-pink-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-info-circle text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Detailed Car Information</h3>
-          <p class="text-gray-600">Get comprehensive details including brand, model, year, color, and body type for every identified vehicle.</p>
+          <h3 class="text-xl font-semibold mono-font">Detailed Car Information</h3>
         </div>
 
         <!-- No Account Required -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-orange-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-user-check text-orange-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-user-check text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">No Account Required</h3>
-          <p class="text-gray-600">Start using CarGPT immediately. No registration, no login, no personal information needed.</p>
+          <h3 class="text-xl font-semibold mono-font">No Account Required</h3>
         </div>
 
         <!-- Perfect for Car Enthusiasts -->
-        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-teal-100 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-heart text-teal-600 text-xl"></i>
+        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
+          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-heart text-white text-xl"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Perfect for Car Enthusiasts</h3>
-          <p class="text-gray-600">Ideal for identifying cars on the street, in listings, or from your own photos. Turn your camera into a powerful car recognition tool.</p>
+          <h3 class="text-xl font-semibold mono-font">Perfect for Car Enthusiasts</h3>
         </div>
       </div>
     </div>
@@ -206,63 +192,18 @@
     </div>
   </section> -->
 
-  <!-- Testimonials Section -->
-  <section class="bg-gray-50 py-12">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center mb-8 asap-navbar-logo">Perfect for Car Enthusiasts</h2>
-      <div class="grid md:grid-cols-3 gap-6 items-stretch">
-        <!-- Use Case 1 -->
-        <div class="bg-white rounded-xl shadow p-6 h-full min-h-[340px] flex flex-col justify-center items-center">
-          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
-            <i class="fa-solid fa-car text-blue-400 text-2xl"></i>
-          </div>
-          <span class="font-semibold text-base text-gray-800 mb-1">Street Car Spotting</span>
-          <p class="text-gray-700 font-medium mb-1 text-center">Identify cars on the street</p>
-          <p class="text-gray-700 italic text-center mb-2">Perfect for car enthusiasts who love spotting interesting vehicles</p>
-        </div>
-        <!-- Use Case 2 -->
-        <div class="bg-white rounded-xl shadow p-6 h-full min-h-[340px] flex flex-col justify-center items-center">
-          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
-            <i class="fa-solid fa-camera text-blue-400 text-2xl"></i>
-          </div>
-          <span class="font-semibold text-base text-gray-800 mb-1">Online Listings</span>
-          <p class="text-gray-700 font-medium mb-1 text-center">Identify cars in listings</p>
-          <p class="text-gray-700 italic text-center mb-2">Great for car buyers checking online listings and photos</p>
-        </div>
-        <!-- Use Case 3 -->
-        <div class="bg-white rounded-xl shadow p-6 h-full min-h-[340px] flex flex-col justify-center items-center">
-          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
-            <i class="fa-solid fa-image text-blue-400 text-2xl"></i>
-          </div>
-          <span class="font-semibold text-base text-gray-800 mb-1">Personal Photos</span>
-          <p class="text-gray-700 font-medium mb-1 text-center">Identify cars from your photos</p>
-          <p class="text-gray-700 italic text-center mb-2">Perfect for collectors documenting their car collections</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="bg-white mt-12 py-6">
+  <footer class="bg-black mt-12 py-6 border-t border-gray-800">
     <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
-      <!-- <div class="flex items-center space-x-4 mb-1">
-        <!-- Social Links with Font Awesome -->
-        <!-- <a href="https://x.com/cargpt_app" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-blue-400" aria-label="Twitter" target="_blank" rel="noopener">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/cargpt/" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-pink-500" aria-label="Instagram" target="_blank" rel="noopener">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div> -->
-      <div class="flex items-center space-x-4 text-sm text-gray-500 mb-1">
-        <a href="terms.html" class="hover:underline">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:underline">Privacy Policy</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-        <a href="support.html" class="hover:underline">Support</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:underline" target="_blank" rel="noopener">Apple EULA</a>
+      <div class="flex items-center space-x-4 text-sm text-gray-400 mb-1 mono-font">
+        <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:text-white transition-colors" target="_blank" rel="noopener">Apple EULA</a>
       </div>
-      <div class="text-center text-xs text-gray-400 font-semibold tracking-wide mt-2">
-        Made with <span class="text-green-500">🚗</span> by © Ahmet Ömer 2025
+      <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2 mono-font">
+        Made with 🚗 by © Ahmet Ömer 2025
       </div>
     </div>
   </footer>

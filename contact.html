@@ -24,17 +24,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-black text-white font-mono">
   <!-- Navbar -->
-  <nav class="flex justify-center px-6 py-4 shadow-sm bg-white">
+  <nav class="flex justify-center px-6 py-4 border-b border-gray-800 bg-black">
     <div class="w-3/4 flex items-center justify-between mx-auto">
       <div class="flex items-center space-x-2">
         <!-- Logo Image and Brand as Link -->
         <a href="index.html" class="flex items-center space-x-2">
           <img src="assets/logo.png" alt="CarGPT Logo" class="w-10 h-10">
-          <span class="font-bold text-lg asap-navbar-logo">CarGPT</span>
+          <span class="font-bold text-lg mono-font">CarGPT</span>
         </a>
       </div>
       <!-- <div class="flex items-center space-x-4">
@@ -51,50 +52,41 @@
 
   <!-- Main Content (Contact) -->
   <section class="max-w-3xl mx-auto px-4 py-16">
-    <div class="bg-white rounded-xl shadow p-8">
-      <h1 class="text-3xl font-extrabold mb-4 text-center asap-navbar-logo">Contact</h1>
-      <p class="mb-6 text-gray-700 text-center">Have a question, feedback, or need support? Feel free to reach out:</p>
+    <div class="bg-gray-900 border border-gray-800 rounded-lg p-8">
+      <h1 class="text-3xl font-bold mb-4 text-center mono-font">Contact</h1>
+      <p class="mb-6 text-gray-400 text-center mono-font">Have a question, feedback, or need support? Feel free to reach out:</p>
       
       <div class="text-center mb-8">
-        <a href="mailto:me@ahmeto.com" class="inline-block text-green-600 font-semibold text-lg hover:underline">me@ahmeto.com</a>
+        <a href="mailto:hi@ahmeto.com" class="inline-block text-white font-semibold text-lg hover:text-gray-400 transition-colors mono-font">hi@ahmeto.com</a>
       </div>
 
-      <hr class="my-8 border-gray-200">
+      <hr class="my-8 border-gray-800">
 
       <!-- Pricing Information Section -->
       <div class="mt-8">
-        <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Pricing Options</h2>
-        <p class="mb-4 text-gray-700 text-center">CarGPT offers flexible payment options for car identification services:</p>
-        <ul class="list-disc pl-6 mb-4 space-y-2">
-          <li><strong>50 Credits</strong>: $1.99 - Each car identification request consumes one credit. Perfect for occasional use.</li>
-          <li><strong>Unlimited Monthly Subscription</strong>: Monthly billing (billed automatically each month until cancelled) - Provides unlimited car identifications for the duration of the subscription period.</li>
+        <h2 class="text-2xl font-bold mb-4 text-center text-white mono-font">Pricing Options</h2>
+        <p class="mb-4 text-gray-400 text-center mono-font">CarGPT offers flexible payment options for car identification services:</p>
+        <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-400 mono-font">
+          <li><strong class="text-white">50 Credits</strong>: $1.99 - Each car identification request consumes one credit. Perfect for occasional use.</li>
+          <li><strong class="text-white">Unlimited Monthly Subscription</strong>: Monthly billing (billed automatically each month until cancelled) - Provides unlimited car identifications for the duration of the subscription period.</li>
         </ul>
-        <p class="text-sm text-gray-600 text-center">For detailed pricing information and terms, please refer to our <a href="terms.html" class="text-blue-600 hover:underline">Terms & Conditions</a> and <a href="privacy.html" class="text-blue-600 hover:underline">Privacy Policy</a>.</p>
+        <p class="text-sm text-gray-500 text-center mono-font">For detailed pricing information and terms, please refer to our <a href="terms.html" class="text-white hover:text-gray-400 transition-colors">Terms & Conditions</a> and <a href="privacy.html" class="text-white hover:text-gray-400 transition-colors">Privacy Policy</a>.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white mt-12 py-6">
+  <footer class="bg-black mt-12 py-6 border-t border-gray-800">
     <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
-      <!-- <div class="flex items-center space-x-4 mb-1">
-        <!-- Social Links with Font Awesome -->
-        <!-- <a href="https://x.com/cargpt_app" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-blue-400" aria-label="Twitter" target="_blank" rel="noopener">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/cargpt/" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-pink-500" aria-label="Instagram" target="_blank" rel="noopener">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div> -->
-      <div class="flex items-center space-x-4 text-sm text-gray-500 mb-1">
-        <a href="terms.html" class="hover:underline">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:underline">Privacy Policy</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-        <a href="support.html" class="hover:underline">Support</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:underline" target="_blank" rel="noopener">Apple EULA</a>
+      <div class="flex items-center space-x-4 text-sm text-gray-400 mb-1 mono-font">
+        <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:text-white transition-colors" target="_blank" rel="noopener">Apple EULA</a>
       </div>
-      <div class="text-center text-xs text-gray-400 font-semibold tracking-wide mt-2">
-        Made with <span class="text-green-500">🚗</span> by © Ahmet Ömer 2025
+      <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2 mono-font">
+        Made with 🚗 by © Ahmet Ömer 2025
       </div>
     </div>
   </footer>
