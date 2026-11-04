@@ -1,255 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarGPT – AI Car Identifier</title>
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXG8FHMTEK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CarGPT – AI Car Identifier</title>
 
-    gtag('config', 'G-WXG8FHMTEK');
-  </script>
-  
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-  <link rel="icon" href="assets/favicons/favicon.ico">
-  <link rel="manifest" href="assets/favicons/site.webmanifest">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-black text-white font-mono">
-  <!-- Navbar -->
-  <nav class="flex justify-center px-6 py-4 border-b border-gray-800 bg-black">
-    <div class="w-3/4 flex items-center justify-between mx-auto">
-      <div class="flex items-center space-x-2">
-        <!-- Logo Image and Brand as Link -->
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/logo.png" alt="CarGPT Logo" class="w-12 h-12">
-          <span class="font-bold text-lg mono-font">CarGPT</span>
-        </a>
-      </div>
-      <!-- <div class="flex items-center space-x-4">
-        <!-- Social Links with Font Awesome -->
-        <!-- <a href="https://x.com/cargpt_app" class="text-gray-600 hover:text-blue-400 transition-colors duration-200" aria-label="Twitter" target="_blank" rel="noopener">
-          <i class="fa-brands fa-x-twitter text-2xl"></i>
-        </a>
-        <a href="https://www.instagram.com/cargpt/" class="text-gray-600 hover:text-pink-500 transition-colors duration-200" aria-label="Instagram" target="_blank" rel="noopener">
-          <i class="fa-brands fa-instagram text-2xl"></i>
-        </a>
-      </div> -->
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="min-h-screen w-full bg-black relative pt-16 pb-8 text-center">
-    <!-- Content -->
-    <div class="max-w-5xl mx-auto px-4 relative z-10">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 mono-font">CarGPT – AI Car Identifier</h1>
-    <p class="text-lg md:text-xl text-gray-400 mb-8 mono-font">CarGPT uses advanced AI to recognize and identify cars from any photo. Instantly get accurate details such as the car's make, model, year, body type, and color—just by uploading or snapping a picture.</p>
-    <div class="flex justify-center mb-8">
-      <!-- App Store Badge -->
-          <a href="https://apps.apple.com/us/app/cargpt-identify-cars-with-ai/id6749280783" class="inline-block pulse-blue-animation" target="_blank" rel="noopener">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-14" style="border-radius: 8px;">
-        </a>
-    </div>
-    <!-- App Screenshots -->
-    <div class="w-full flex items-center justify-center mb-0">
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl">
-        <img src="assets/phone/onboarding.png" alt="CarGPT Onboarding View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/onboarding.png', 'CarGPT Onboarding View')">
-        <img src="assets/phone/home.png" alt="CarGPT Identification View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/home.png', 'CarGPT Identification View')">
-        <img src="assets/phone/result.png" alt="CarGPT Result View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/result.png', 'CarGPT Result View')">
-        <img src="assets/phone/collection.png" alt="CarGPT Collection View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/collection.png', 'CarGPT Collection View')">
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="bg-black pt-8 pb-16 border-t border-gray-800">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-4 mono-font">Key Features</h2>
-      <p class="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto mono-font">Identify any car using image-based AI with instant results and no account required</p>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- AI Car Identification -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-car text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">AI Car Identification</h3>
-        </div>
-
-        <!-- Photo & Camera Support -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-camera text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">Photo & Camera Support</h3>
-        </div>
-
-        <!-- Instant Results -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-bolt text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">Instant Results</h3>
-        </div>
-
-        <!-- Private and Secure -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">Private and Secure</h3>
-        </div>
-
-        <!-- Classic & Modern Cars -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-car-side text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">Classic & Modern Cars</h3>
-        </div>
-
-        <!-- Simple Credit System -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-coins text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">Simple Pricing</h3>
-        </div>
-
-        <!-- Detailed Car Information -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-info-circle text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">Detailed Car Information</h3>
-        </div>
-
-        <!-- No Account Required -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-user-check text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">No Account Required</h3>
-        </div>
-
-        <!-- Perfect for Car Enthusiasts -->
-        <div class="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors">
-          <div class="w-12 h-12 border border-gray-700 rounded-lg mb-4 flex items-center justify-center">
-            <i class="fa-solid fa-heart text-white text-xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mono-font">Perfect for Car Enthusiasts</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing Section -->
-  <!-- <section class="bg-white py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-4 asap-navbar-logo">Simple One-Time Credits</h2>
-      <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">Only pay for what you need. No subscriptions. No ads.</p>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-gray-50 rounded-xl p-6 text-center border-2 border-gray-200 transition-colors">
-          <div class="text-3xl font-bold text-gray-800 mb-2">50 Credits</div>
-          <div class="text-2xl font-bold text-blue-400 mb-4">$1.99</div>
-          <p class="text-gray-600 text-sm">Perfect for occasional use</p>
-        </div>
-
-        <div class="bg-gray-50 rounded-xl p-6 text-center border-2 border-gray-200 transition-colors">
-          <div class="text-3xl font-bold text-gray-800 mb-2">100 Credits</div>
-          <div class="text-2xl font-bold text-blue-400 mb-4">$2.99</div>
-          <p class="text-gray-600 text-sm">Most popular choice</p>
-        </div>
-
-        <div class="bg-gray-50 rounded-xl p-6 text-center border-2 border-gray-200 transition-colors">
-          <div class="text-3xl font-bold text-gray-800 mb-2">500 Credits</div>
-          <div class="text-2xl font-bold text-blue-400 mb-4">$9.99</div>
-          <p class="text-gray-600 text-sm">Great value for enthusiasts</p>
-        </div>
-
-        <div class="bg-gray-50 rounded-xl p-6 text-center border-2 border-gray-200 transition-colors">
-          <div class="text-3xl font-bold text-gray-800 mb-2">1000 Credits</div>
-          <div class="text-2xl font-bold text-blue-400 mb-4">$17.99</div>
-          <p class="text-gray-600 text-sm">Best for heavy users</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Footer -->
-  <footer class="bg-black mt-12 py-6 border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
-      <div class="flex items-center space-x-4 text-sm text-gray-400 mb-1 mono-font">
-        <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
-        <a href="support.html" class="hover:text-white transition-colors">Support</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:text-white transition-colors" target="_blank" rel="noopener">Apple EULA</a>
-      </div>
-      <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2 mono-font">
-        Made with 🚗 by © Ahmet Ömer 2025
-      </div>
-    </div>
-  </footer>
-
-  <!-- Modal for Phone Images -->
-  <div id="phoneModal" class="modal">
-    <div class="modal-content">
-      <button class="close-modal" onclick="closeModal()">&times;</button>
-      <img id="modalImage" class="modal-image" src="" alt="">
-    </div>
-  </div>
-
-  <script>
-    function openModal(imageSrc, imageAlt) {
-      const modal = document.getElementById('phoneModal');
-      const modalImage = document.getElementById('modalImage');
-      
-      modalImage.src = imageSrc;
-      modalImage.alt = imageAlt;
-      modal.classList.add('show');
-      
-      // Prevent body scroll when modal is open
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeModal() {
-      const modal = document.getElementById('phoneModal');
-      modal.classList.remove('show');
-      
-      // Restore body scroll
-      document.body.style.overflow = 'auto';
-    }
-    
-    // Close modal when clicking on backdrop
-    document.getElementById('phoneModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeModal();
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-WXG8FHMTEK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    });
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeModal();
-      }
-    });
-  </script>
-</body>
+      gtag("js", new Date());
+
+      gtag("config", "G-WXG8FHMTEK");
+    </script>
+
+    <link
+      href="assets/favicons/apple-touch-icon.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="assets/favicons/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="assets/favicons/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link href="assets/favicons/favicon.ico" rel="icon" />
+    <link href="assets/favicons/site.webmanifest" rel="manifest" />
+
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css?v=2" rel="stylesheet" />
+  </head>
+  <body class="site-page">
+    <div class="page-frame">
+      <nav aria-label="Main navigation" class="site-header">
+        <div class="header-inner">
+          <div>
+            <a class="brand" href="index.html">
+              <img alt="CarGPT Logo" src="assets/logo.png" />
+              <span>CarGPT</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <main id="main-content">
+        <section class="hero">
+          <div class="hero-inner">
+            <h1>CarGPT – AI Car Identifier</h1>
+            <p class="hero-description">
+              CarGPT uses advanced AI to recognize and identify cars from any
+              photo. Instantly get accurate details such as the car's make,
+              model, year, body type, and color—just by uploading or snapping a
+              picture.
+            </p>
+            <div class="download">
+              <a
+                class="app-store-link"
+                href="https://apps.apple.com/us/app/cargpt-identify-cars-with-ai/id6749280783"
+                rel="noopener"
+                target="_blank"
+              >
+                <img
+                  alt="Download on the App Store"
+                  class="app-store-badge"
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                />
+              </a>
+            </div>
+
+            <div class="screenshot-panel">
+              <div class="screenshot-grid">
+                <button
+                  aria-controls="phoneModal"
+                  aria-haspopup="dialog"
+                  aria-label="CarGPT Onboarding View"
+                  class="screenshot-button"
+                  data-preview-alt="CarGPT Onboarding View"
+                  data-preview-src="assets/phone/onboarding.png"
+                  type="button"
+                >
+                  <img
+                    alt="CarGPT Onboarding View"
+                    src="assets/phone/onboarding.png"
+                  />
+                </button>
+                <button
+                  aria-controls="phoneModal"
+                  aria-haspopup="dialog"
+                  aria-label="CarGPT Identification View"
+                  class="screenshot-button"
+                  data-preview-alt="CarGPT Identification View"
+                  data-preview-src="assets/phone/home.png"
+                  type="button"
+                >
+                  <img
+                    alt="CarGPT Identification View"
+                    src="assets/phone/home.png"
+                  />
+                </button>
+                <button
+                  aria-controls="phoneModal"
+                  aria-haspopup="dialog"
+                  aria-label="CarGPT Result View"
+                  class="screenshot-button"
+                  data-preview-alt="CarGPT Result View"
+                  data-preview-src="assets/phone/result.png"
+                  type="button"
+                >
+                  <img alt="CarGPT Result View" src="assets/phone/result.png" />
+                </button>
+                <button
+                  aria-controls="phoneModal"
+                  aria-haspopup="dialog"
+                  aria-label="CarGPT Collection View"
+                  class="screenshot-button"
+                  data-preview-alt="CarGPT Collection View"
+                  data-preview-src="assets/phone/collection.png"
+                  type="button"
+                >
+                  <img
+                    alt="CarGPT Collection View"
+                    src="assets/phone/collection.png"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="features">
+          <div class="section-inner">
+            <h2>Key Features</h2>
+            <p class="section-description">
+              Identify any car using image-based AI with instant results and no
+              account required
+            </p>
+            <div class="feature-grid">
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-car"></i>
+                </div>
+                <h3>AI Car Identification</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-camera"></i>
+                </div>
+                <h3>Photo &amp; Camera Support</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Instant Results</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Private and Secure</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-car-side"></i>
+                </div>
+                <h3>Classic &amp; Modern Cars</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-coins"></i>
+                </div>
+                <h3>Simple Pricing</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-info-circle"></i>
+                </div>
+                <h3>Detailed Car Information</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-user-check"></i>
+                </div>
+                <h3>No Account Required</h3>
+              </div>
+
+              <div class="feature-panel">
+                <div class="feature-icon">
+                  <i aria-hidden="true" class="fa-solid fa-heart"></i>
+                </div>
+                <h3>Perfect for Car Enthusiasts</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contact.html">Contact</a>
+            <a href="support.html">Support</a>
+            <a
+              href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+              rel="noopener"
+              target="_blank"
+              >Apple EULA</a
+            >
+          </div>
+          <div class="footer-credit">Made with 🚗 by © Ahmet Ömer 2025</div>
+        </div>
+      </footer>
+    </div>
+
+    <dialog aria-label="Image preview" class="image-dialog" id="phoneModal">
+      <div class="dialog-content">
+        <button
+          aria-label="Close image preview"
+          class="close-modal"
+          type="button"
+        >
+          ×</button
+        ><img alt="" class="modal-image" id="modalImage" />
+      </div>
+    </dialog>
+    <script defer="True" src="preview.js?v=2"></script>
+  </body>
 </html>

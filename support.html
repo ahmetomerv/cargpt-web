@@ -1,129 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support – CarGPT</title>
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXG8FHMTEK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Support – CarGPT</title>
 
-    gtag('config', 'G-WXG8FHMTEK');
-  </script>
-  
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-  <link rel="icon" href="assets/favicons/favicon.ico">
-  <link rel="manifest" href="assets/favicons/site.webmanifest">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-black text-white font-mono">
-  <!-- Navbar -->
-  <nav class="flex justify-center px-6 py-4 border-b border-gray-800 bg-black">
-    <div class="w-3/4 flex items-center justify-between mx-auto">
-      <div class="flex items-center space-x-2">
-        <!-- Logo Image and Brand as Link -->
-        <a href="index.html" class="flex items-center space-x-2">
-          <img src="assets/logo.png" alt="CarGPT Logo" class="w-10 h-10">
-          <span class="font-bold text-lg mono-font">CarGPT</span>
-        </a>
-      </div>
-      <!-- <div class="flex items-center space-x-4">
-        <!-- Social Links with Font Awesome -->
-        <!-- <a href="https://x.com/cargpt_app" class="text-gray-600 hover:text-blue-400 transition-colors duration-200" aria-label="Twitter" target="_blank" rel="noopener">
-          <i class="fa-brands fa-x-twitter text-2xl"></i>
-        </a>
-        <a href="https://www.instagram.com/cargpt/" class="text-gray-600 hover:text-pink-500 transition-colors duration-200" aria-label="Instagram" target="_blank" rel="noopener">
-          <i class="fa-brands fa-instagram text-2xl"></i>
-        </a>
-      </div> -->
-    </div>
-  </nav>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-WXG8FHMTEK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <!-- Main Content (Support) -->
-  <section class="max-w-4xl mx-auto px-4 py-16">
-    <div class="bg-gray-900 border border-gray-800 rounded-lg p-8">
-      <h1 class="text-3xl font-bold mb-6 text-center mono-font">CarGPT Support</h1>
-      
-      <div class="text-center mb-8">
-        <p class="text-lg text-gray-300 mb-4 mono-font">Welcome to the CarGPT Support Page!</p>
-        <p class="text-gray-400 mono-font">If you have any questions, issues, or feedback about the app, we're here to help.</p>
-      </div>
+      gtag("config", "G-WXG8FHMTEK");
+    </script>
 
-      <hr class="my-8 border-gray-800">
+    <link
+      href="assets/favicons/apple-touch-icon.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
+      href="assets/favicons/favicon-32x32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="assets/favicons/favicon-16x16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link href="assets/favicons/favicon.ico" rel="icon" />
+    <link href="assets/favicons/site.webmanifest" rel="manifest" />
 
-      <!-- Common Questions Section -->
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold mb-6 text-white mono-font">Common Questions</h2>
-        
-        <div class="space-y-6">
-          <!-- Question 1 -->
-          <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
-            <h3 class="font-semibold text-lg text-white mb-2 mono-font">Q: Do I need an account to use the app?</h3>
-            <p class="text-gray-400 mono-font">A: No! CarGPT does not require an account to use the app. However, you need to have internet access to identify cars with images.</p>
-          </div>
-
-          <!-- Question 2 -->
-          <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
-            <h3 class="font-semibold text-lg text-white mb-2 mono-font">Q: How do I get credits or subscribe?</h3>
-            <p class="text-gray-400 mb-2 mono-font">A: CarGPT offers two payment options:</p>
-            <ul class="list-disc pl-6 text-gray-400 space-y-1 mono-font">
-              <li><strong class="text-white">50 Credits</strong>: $1.99 - Each car identification request consumes one credit. Perfect for occasional use.</li>
-              <li><strong class="text-white">Unlimited Monthly Subscription</strong>: Monthly billing (billed automatically each month until cancelled) - Provides unlimited car identifications for the duration of the subscription period.</li>
-            </ul>
-            <p class="text-gray-400 mt-2 mono-font">You can purchase credits or subscribe from the Settings page in the app. Subscriptions automatically renew unless auto-renew is turned off at least 24 hours before the end of the current period.</p>
-          </div>
-
-          <!-- Question 3 -->
-          <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
-            <h3 class="font-semibold text-lg text-white mb-2 mono-font">Q: Is my data being collected?</h3>
-            <p class="text-gray-400 mono-font">A: No personal data is collected. However, CarGPT uses <strong class="text-white">Firebase Analytics</strong> to anonymously track how the app is used — for example, which features are accessed and how long they're used. This data <strong class="text-white">does not include personal identifiers</strong> such as your name, email, IP address, or any health information. It is collected only to help improve app functionality and user experience.</p>
+    <link
+      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css?v=2" rel="stylesheet" />
+  </head>
+  <body class="site-page">
+    <div class="page-frame">
+      <nav aria-label="Main navigation" class="site-header">
+        <div class="header-inner">
+          <div>
+            <a class="brand" href="index.html">
+              <img alt="CarGPT Logo" src="assets/logo.png" />
+              <span>CarGPT</span>
+            </a>
           </div>
         </div>
-      </div>
+      </nav>
+      <main id="main-content">
+        <section class="document-section">
+          <div class="document-content">
+            <h1>CarGPT Support</h1>
+            <div>
+              <p>Welcome to the CarGPT Support Page!</p>
+              <p>
+                If you have any questions, issues, or feedback about the app,
+                we're here to help.
+              </p>
+            </div>
+            <hr />
 
-      <hr class="my-8 border-gray-800">
+            <div>
+              <h2>Common Questions</h2>
+              <div>
+                <div class="support-panel">
+                  <h3>Q: Do I need an account to use the app?</h3>
+                  <p>
+                    A: No! CarGPT does not require an account to use the app.
+                    However, you need to have internet access to identify cars
+                    with images.
+                  </p>
+                </div>
 
-      <!-- Contact Section -->
-      <div class="text-center">
-        <h2 class="text-2xl font-bold mb-6 text-white mono-font">Contact</h2>
-        <p class="text-gray-400 mb-4 mono-font">Need help or want to share feedback? Please use the email below.</p>
-        
-        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 inline-block">
-          <h3 class="font-semibold text-lg text-white mb-2 mono-font">Ahmet Ömer</h3>
-          <p class="text-gray-400 mb-2 mono-font">📧 Email:</p>
-          <a href="mailto:support@ahmeto.com" class="text-white font-semibold text-lg hover:text-gray-400 transition-colors mono-font">support@ahmeto.com</a>
+                <div class="support-panel">
+                  <h3>Q: How do I get credits or subscribe?</h3>
+                  <p>A: CarGPT offers two payment options:</p>
+                  <ul>
+                    <li>
+                      <strong>50 Credits</strong>: $1.99 - Each car
+                      identification request consumes one credit. Perfect for
+                      occasional use.
+                    </li>
+                    <li>
+                      <strong>Unlimited Monthly Subscription</strong>: Monthly
+                      billing (billed automatically each month until cancelled)
+                      - Provides unlimited car identifications for the duration
+                      of the subscription period.
+                    </li>
+                  </ul>
+                  <p>
+                    You can purchase credits or subscribe from the Settings page
+                    in the app. Subscriptions automatically renew unless
+                    auto-renew is turned off at least 24 hours before the end of
+                    the current period.
+                  </p>
+                </div>
+
+                <div class="support-panel">
+                  <h3>Q: Is my data being collected?</h3>
+                  <p>
+                    A: No personal data is collected. However, CarGPT uses
+                    <strong>Firebase Analytics</strong> to anonymously track how
+                    the app is used — for example, which features are accessed
+                    and how long they're used. This data
+                    <strong>does not include personal identifiers</strong> such
+                    as your name, email, IP address, or any health information.
+                    It is collected only to help improve app functionality and
+                    user experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr />
+
+            <div>
+              <h2>Contact</h2>
+              <p>
+                Need help or want to share feedback? Please use the email below.
+              </p>
+              <div class="support-panel">
+                <h3>Ahmet Ömer</h3>
+                <p>📧 Email:</p>
+                <a href="mailto:support@ahmeto.com">support@ahmeto.com</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contact.html">Contact</a>
+            <a href="support.html">Support</a>
+            <a
+              href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+              rel="noopener"
+              target="_blank"
+              >Apple EULA</a
+            >
+          </div>
+          <div class="footer-credit">Made with 🚗 by © Ahmet Ömer 2025</div>
         </div>
-      </div>
+      </footer>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-black mt-12 py-6 border-t border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
-      <div class="flex items-center space-x-4 text-sm text-gray-400 mb-1 mono-font">
-        <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
-        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
-        <a href="support.html" class="hover:text-white transition-colors">Support</a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="hover:text-white transition-colors" target="_blank" rel="noopener">Apple EULA</a>
-      </div>
-      <div class="text-center text-xs text-gray-500 font-semibold tracking-wide mt-2 mono-font">
-        Made with 🚗 by © Ahmet Ömer 2025
-      </div>
-    </div>
-  </footer>
-</body>
+  </body>
 </html>
