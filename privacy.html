@@ -6,19 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Privacy Policy – CarGPT</title>
 
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtag/js?id=G-WXG8FHMTEK"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-WXG8FHMTEK");
-    </script>
+    <script defer src="analytics.js?v=1"></script>
 
     <link
       href="assets/favicons/apple-touch-icon.png"
@@ -52,7 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link href="styles.css?v=2" rel="stylesheet" />
+    <link href="styles.css?v=3" rel="stylesheet" />
   </head>
   <body class="site-page">
     <div class="page-frame">
@@ -70,19 +58,19 @@
         <section class="document-section">
           <div class="document-content">
             <h1>Privacy Policy</h1>
-            <p>Effective Date: November 26, 2025</p>
+            <p>Effective Date: November 5, 2026</p>
             <p><strong>App Name:</strong> CarGPT</p>
             <p><strong>Developer:</strong> Ahmet Ömer</p>
             <hr />
             <h2>1. Overview</h2>
             <p>
               CarGPT is designed with your privacy in mind. This Privacy Policy
-              explains how your data is handled. In short: we do not collect,
-              store, or share any personal information that can identify you.
-              The app processes car photos for identification purposes only,
-              with no server storage or user tracking that links to your
-              identity. It is built to function transparently and securely while
-              protecting your privacy.
+              explains how data is handled by the iOS app and this website.
+              Sections 2–8 describe the app; section 11 describes optional
+              website analytics separately. The app processes car photos for
+              identification purposes only, with no server storage or user
+              tracking that links to your identity. It is built to function
+              transparently and securely while protecting your privacy.
             </p>
             <hr />
             <h2>2. Minimal Data Collection (Anonymous Analytics)</h2>
@@ -223,7 +211,9 @@
               If there are changes to data handling practices, we will update
               this Privacy Policy. Updates will be posted within the app and/or
               on the App Store listing. Continued use of CarGPT implies
-              acceptance of the updated terms.
+              acceptance of the updated terms. Website analytics always requires
+              your separate consent; continued use of the website does not grant
+              it.
             </p>
             <hr />
             <h2>10. Contact</h2>
@@ -231,6 +221,69 @@
             <p>
               📧 <strong>Email:</strong>
               <a href="mailto:support@ahmeto.com">support@ahmeto.com</a>
+            </p>
+            <hr />
+            <h2 id="website-analytics">
+              11. Optional Website Analytics (Umami)
+            </h2>
+            <p>
+              Ahmet Ömer uses Umami to understand basic website traffic and
+              improve this website. This is separate from the iOS app's Firebase
+              Analytics. Umami is self-hosted at analytics.ahmeto.com on the
+              developer's Hetzner server in Germany. Website analytics data is
+              retained indefinitely unless manually deleted.
+            </p>
+            <p>
+              Analytics is optional and based on your consent (Article 6(1)(a)
+              GDPR). The Umami script is not loaded and no analytics requests
+              are sent until you select “Allow analytics”. Declining does not
+              affect your access to the website or app.
+            </p>
+            <p>
+              When allowed, basic pageviews include the page path and title,
+              referring page, website hostname, browser language, screen size,
+              and the time of the visit. Query strings and fragments are removed
+              from page and referrer addresses. The analytics server receives
+              your IP address and browser User-Agent to process requests; Umami
+              uses these to derive information such as browser, operating
+              system, device type, approximate location and pseudonymous
+              visit/session identifiers. We do not set a custom user ID or
+              collect custom events, session recordings, or optional performance
+              or error reports. Umami does not use analytics cookies.
+            </p>
+            <p>
+              Your browser stores your choice (“accepted” or “denied”) in
+              localStorage under <code>cargpt.umami.consent.v1</code>. This
+              preference has no automatic expiry and remains until changed or
+              browser storage is cleared. It is separate from any previous
+              analytics preference. A temporary sessionStorage flag,
+              <code>cargpt.umami.blocked.v1</code>, may keep analytics blocked
+              if saving a choice fails. These preferences are used only to
+              manage consent. Open tabs synchronize changes when browser
+              facilities are available. If storage is unavailable, analytics
+              stays blocked and your choice may need to be made again on a later
+              visit.
+            </p>
+            <p>
+              Use the “Analytics preferences” button in any page footer and
+              select “Decline” to withdraw consent at any time. Withdrawal stops
+              future pageviews, including navigation tracking. If saving fails,
+              tracking stays blocked on the current page without reloading it;
+              an older saved choice may remain for a future visit. Withdrawal
+              does not undo requests already sent or affect the lawfulness of
+              processing before withdrawal, and does not automatically delete
+              analytics already collected.
+            </p>
+            <p>
+              Where applicable under the GDPR, you may request access,
+              rectification, erasure, restriction of processing, and data
+              portability, and object to processing where that right applies.
+              You may withdraw consent at any time and lodge a complaint with a
+              competent data protection supervisory authority. To exercise your
+              rights or ask about deletion, contact Ahmet Ömer at
+              <a href="mailto:support@ahmeto.com">support@ahmeto.com</a>.
+              Because we do not assign you a custom user ID, it may not be
+              possible to associate particular analytics records with you.
             </p>
           </div>
         </section>
@@ -240,6 +293,13 @@
           <div class="footer-links">
             <a href="terms.html">Terms &amp; Conditions</a>
             <a href="privacy.html">Privacy Policy</a>
+            <button
+              type="button"
+              class="footer-preferences"
+              data-analytics-preferences
+            >
+              Analytics preferences
+            </button>
             <a href="contact.html">Contact</a>
             <a href="support.html">Support</a>
             <a
@@ -253,5 +313,34 @@
         </div>
       </footer>
     </div>
+    <section
+      id="analytics-banner"
+      class="analytics-banner"
+      aria-labelledby="analytics-heading"
+      hidden
+    >
+      <div class="analytics-copy">
+        <h2 id="analytics-heading">Optional analytics</h2>
+        <p>
+          Allow basic pageviews to help improve this website? Declining does not
+          affect access. You can change your choice at any time in Analytics
+          preferences.
+          <a href="privacy.html#website-analytics">Privacy notice</a>.
+        </p>
+        <p id="analytics-status" role="status"></p>
+      </div>
+      <div class="analytics-actions">
+        <button
+          type="button"
+          class="analytics-button analytics-allow"
+          data-analytics-allow
+        >
+          Allow analytics
+        </button>
+        <button type="button" class="analytics-button" data-analytics-decline>
+          Decline
+        </button>
+      </div>
+    </section>
   </body>
 </html>

@@ -6,19 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>CarGPT – AI Car Identifier</title>
 
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtag/js?id=G-WXG8FHMTEK"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-WXG8FHMTEK");
-    </script>
+    <script defer src="analytics.js?v=1"></script>
 
     <link
       href="assets/favicons/apple-touch-icon.png"
@@ -52,7 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link href="styles.css?v=2" rel="stylesheet" />
+    <link href="styles.css?v=3" rel="stylesheet" />
   </head>
   <body class="site-page">
     <div class="page-frame">
@@ -229,6 +217,13 @@
           <div class="footer-links">
             <a href="terms.html">Terms &amp; Conditions</a>
             <a href="privacy.html">Privacy Policy</a>
+            <button
+              type="button"
+              class="footer-preferences"
+              data-analytics-preferences
+            >
+              Analytics preferences
+            </button>
             <a href="contact.html">Contact</a>
             <a href="support.html">Support</a>
             <a
@@ -255,5 +250,34 @@
       </div>
     </dialog>
     <script defer="True" src="preview.js?v=2"></script>
+    <section
+      id="analytics-banner"
+      class="analytics-banner"
+      aria-labelledby="analytics-heading"
+      hidden
+    >
+      <div class="analytics-copy">
+        <h2 id="analytics-heading">Optional analytics</h2>
+        <p>
+          Allow basic pageviews to help improve this website? Declining does not
+          affect access. You can change your choice at any time in Analytics
+          preferences.
+          <a href="privacy.html#website-analytics">Privacy notice</a>.
+        </p>
+        <p id="analytics-status" role="status"></p>
+      </div>
+      <div class="analytics-actions">
+        <button
+          type="button"
+          class="analytics-button analytics-allow"
+          data-analytics-allow
+        >
+          Allow analytics
+        </button>
+        <button type="button" class="analytics-button" data-analytics-decline>
+          Decline
+        </button>
+      </div>
+    </section>
   </body>
 </html>
